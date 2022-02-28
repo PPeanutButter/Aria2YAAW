@@ -389,7 +389,13 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
           $.each(result, function(n, e) {
             $("#task-gid-"+e.gid).data("raw", e);
           });
-          bind_event($("#active-tasks-table"))
+          bind_event($("#active-tasks-table"));
+          var task_count = $("#active-tasks-table .task").length;
+          if (task_count > 0){
+            $('#active-tasks .section-header b').text("Active Tasks ("+task_count+")")
+          }else{
+            $('#active-tasks .section-header b').text("Active Tasks")
+          };
         }
       );
     },
@@ -485,8 +491,13 @@ if (typeof ARIA2=="undefined"||!ARIA2) var ARIA2=(function(){
           if ($("#waiting-tasks-table .empty-tasks").length > 0 &&
             $("#stopped-tasks-table .task").length > 0) {
               $("#waiting-tasks-table").empty();
-            }
-
+            };
+          var task_count = $("#other-tasks .task").length;
+          if (task_count > 0){
+            $('#other-tasks .section-header b').text("Other Tasks ("+task_count+")")
+          }else{
+            $('#other-tasks .section-header b').text("Other Tasks")
+          };
         }
       );
     },
