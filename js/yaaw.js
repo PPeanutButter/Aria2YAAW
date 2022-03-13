@@ -382,12 +382,12 @@ var YAAW = (function() {
 
       view: {
         bitfield: function() {
-          var graphic = "░▒▓█";
+          var graphic = " 123456789#";
           return function(text) {
             var len = text.length;
             var result = "";
             for (var i=0; i<len; i++)
-            result += graphic[Math.floor(parseInt(text[i], 16)/4)] + "&#8203;";
+              result += graphic[Math.floor((parseInt(text[i], 16)*1.0)/1.5)] + "&#8203;";
             return result;
           };
         },
@@ -395,6 +395,7 @@ var YAAW = (function() {
         bitfield_to_10: function() {
           var graphic = "░▒▓█";
           return function(text) {
+            console.log("bitfield_to_10"+text);
             var len = text.length;
             var part_len = Math.ceil(len/10);
             var result = "";
@@ -408,6 +409,7 @@ var YAAW = (function() {
               }
               result += graphic[Math.floor(p/part_len/4)] + "&#8203;";
             }
+            console.log("bitfield_to_10-result"+result);
             return result;
           };
         },
