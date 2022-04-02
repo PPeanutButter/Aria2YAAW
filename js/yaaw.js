@@ -385,9 +385,9 @@ var YAAW = (function() {
           var graphic = " 123456789#";
           return function(text) {
             var len = text.length;
-            var result = "";
+            var result = "<br/>";
             for (var i=0; i<len; i++)
-              result += graphic[Math.floor((parseInt(text[i], 16)*1.0)/1.5)] + "&#8203;";
+              result += '<svg width="15" height="15"><g transform="translate(2, 4)"><rect width="11" height="11" x="0" y="0" class="ContributionCalendar-day" rx="2" ry="2" data-level="'+Math.floor((parseInt(text[i], 16)*4.0)/15)+'"></rect></g></svg>';
             return result;
           };
         },
