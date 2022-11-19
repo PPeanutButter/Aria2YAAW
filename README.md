@@ -1,9 +1,12 @@
+
 YAAW
 ====
 
 Yet Another Aria2 Web Frontend in pure HTML/CSS/Javascirpt.
 
 No HTTP server, backend or server-side program. All you need is just a browser.
+
+Download lastest aria2c build from [here](https://github.com/PPeanutButter/aria2-static-build)
 
 ![](preview1.png)
 
