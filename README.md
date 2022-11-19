@@ -2,13 +2,17 @@
 YAAW
 ====
 
+改动Modifications:
+- 重新下载时删除之前失败的任务 delete failure tasks when redownload it
+- 修改下载bitfield显示 change ui of bitfield
+
+![](preview1.png)
+
 Yet Another Aria2 Web Frontend in pure HTML/CSS/Javascirpt.
 
 No HTTP server, backend or server-side program. All you need is just a browser.
 
 Download lastest aria2c build from [here](https://github.com/PPeanutButter/aria2-static-build)
-
-![](preview1.png)
 
 Usage
 -----
