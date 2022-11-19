@@ -5,7 +5,7 @@ Yet Another Aria2 Web Frontend in pure HTML/CSS/Javascirpt.
 
 No HTTP server, backend or server-side program. All you need is just a browser.
 
-<br />
+![](preview.png)
 
 Usage
 -----
